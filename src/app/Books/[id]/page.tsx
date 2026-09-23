@@ -9,7 +9,7 @@ export type PageProps = {
 
 const BooksDetailsPage = async ({ params }: PageProps) => {
   const { id } = await params;
-  const res = await fetch(`http://localhost:5000/Books/${id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/Books/${id}`);
   if (!res.ok) {
     throw new Error("Data is not Loading.....");
   }

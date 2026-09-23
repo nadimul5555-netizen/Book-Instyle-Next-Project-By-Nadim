@@ -5,13 +5,23 @@ import Banner from '../Components/Common/Banner';
 
 
 const fetchBooks =async()=>{
-  const res = await fetch("http://localhost:5000/Books")
-  return res.json();
-}
+  try {
 
-const BooksPage =async () => {
-
-  const UseData = await fetchBooks();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/Books`)
+    return res.json();
+  } catch (error){
+    console.error("Error fetching books Data:",error)
+    return [];
+  }
+  }
+  console.log(
+  "SERVER URL:",
+  process.env.NEXT_PUBLIC_SERVER_BASE_URL
+);
+  
+  const BooksPage =async () => {
+    
+    const UseData = await fetchBooks();
   console.log(UseData)
   return (
     
