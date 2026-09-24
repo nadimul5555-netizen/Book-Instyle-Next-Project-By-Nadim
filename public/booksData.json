@@ -1,6 +1,6 @@
 [
   {
-    "bookId": 1,
+    "id": 1,
     "bookName": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "image": "https://i.ibb.co.com/khHN7Pk/9780143454212.jpg",
@@ -13,7 +13,7 @@
     "yearOfPublishing": 1925
   },
   {
-    "bookId": 2,
+    "id": 2,
     "bookName": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "image": "https://i.ibb.co.com/0cv102J/To-Kill-a-Mockingbird.webp",
@@ -26,7 +26,7 @@
     "yearOfPublishing": 1960
   },
   {
-    "bookId": 3,
+    "id": 3,
     "bookName": "1984",
     "author": "George Orwell",
     "image": "https://i.ibb.co.com/MprDyVt/51-BIA4rrae-L-AC-UF1000-1000-QL80.jpg",
@@ -39,7 +39,7 @@
     "yearOfPublishing": 1949
   },
   {
-    "bookId": 4,
+    "id": 4,
     "bookName": "The Catcher in the Rye",
     "author": "J.D. Salinger",
     "image": "https://i.ibb.co.com/tYSWRfG/catcherrye-edited-1-800x.png",
@@ -52,7 +52,7 @@
     "yearOfPublishing": 1951
   },
   {
-    "bookId": 5,
+    "id": 5,
     "bookName": "Pride and Prejudice",
     "author": "Jane Austen",
     "image": "https://i.ibb.co.com/YdQDMpn/81me-ud-V63-L-AC-UF1000-1000-QL80.jpg",
@@ -65,7 +65,7 @@
     "yearOfPublishing": 1813
   },
   {
-    "bookId": 6,
+    "id": 6,
     "bookName": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "image": "https://i.ibb.co.com/xS8YvxL/81m-CE-uclx-L-UF1000-1000-QL80.jpg",
@@ -78,7 +78,7 @@
     "yearOfPublishing": 1937
   },
   {
-    "bookId": 7,
+    "id": 7,
     "bookName": "Harry Potter and the Sorcerer's Stone",
     "author": "J.K. Rowling",
     "image": "https://i.ibb.co.com/989qMRW/42844155.jpg",
@@ -91,7 +91,7 @@
     "yearOfPublishing": 1997
   },
   {
-    "bookId": 8,
+    "id": 8,
     "bookName": "The Alchemist",
     "author": "Paulo Coelho",
     "image": "https://i.ibb.co.com/zS9jsdK/18144590.jpg",
@@ -104,7 +104,7 @@
     "yearOfPublishing": 1988
   },
   {
-    "bookId": 9,
+    "id": 9,
     "bookName": "The Girl on the Train",
     "author": "Paula Hawkins",
     "image": "https://i.ibb.co.com/P6hfCmJ/Whats-App-Image-2024-05-22-at-11-21-25-2e21ae46.jpg",

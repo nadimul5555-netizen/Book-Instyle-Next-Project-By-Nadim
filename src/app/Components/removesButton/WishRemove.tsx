@@ -13,6 +13,7 @@ const WishRemove = ({ data }: WishRemoveProps) => {
   const onRemove =(data :BooksType)=>{
     const removedWishList=wishList.filter(wish=> data.id !== wish.id )
     setWishList(removedWishList)
+    toast.error(`Successfully ${data.bookName} is Removed from the list `)
   }
 
   return (

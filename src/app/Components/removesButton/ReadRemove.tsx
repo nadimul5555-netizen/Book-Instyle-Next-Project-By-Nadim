@@ -1,6 +1,7 @@
 import { BooksType } from "@/app/AllTypes";
 import { BooksContext } from "@/app/Context/Context";
 import { useContext } from "react";
+import { toast } from "react-toastify";
 
 export type ReadRemoveProps = {
   Data: BooksType
@@ -13,6 +14,7 @@ const ReadRemove = ({ Data }: ReadRemoveProps) => {
     const onRemove=(Data:BooksType)=>{
         const removeReadbooks =readBooks.filter(data=> Data.id !==data.id)
         setReadBooks(removeReadbooks)
+        toast.error(`Successfully ${Data.bookName} is Removed from the list `)
     }
 
   return (

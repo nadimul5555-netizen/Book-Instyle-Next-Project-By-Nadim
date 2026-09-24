@@ -7,14 +7,25 @@ export type PageProps = {
   params: Promise<ParamsBooks>;
 };
 
+const getBooks = async()=>{
+   try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching books Data:", error);
+    return [];
+  }
+};
+
+
 const BooksDetailsPage = async ({ params }: PageProps) => {
   const { id } = await params;
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/Books/${id}`);
-  if (!res.ok) {
-    throw new Error("Data is not Loading.....");
-  }
+   const BooksData = await getBooks();
 
-  const Data: BooksType = await res.json();
+   const Data = BooksData.find((data:BooksType)=> data.id === parseInt(id))as BooksType;
+
+  
 
 
   return (
