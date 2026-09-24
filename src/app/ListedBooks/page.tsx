@@ -1,5 +1,5 @@
 'use client'
-import { useContext, useState } from "react";
+import { Dispatch, SetStateAction, useContext, useState } from "react";
 import { BooksContext } from "../Context/Context";
 import { BooksType } from "../AllTypes";
 import WishListBooks from "./WishListBooks";
@@ -8,9 +8,19 @@ import ReadBooks from "./ReadBooks";
 export interface PageProps {
   wishList:BooksType[];
 }
+
+export interface ButtonStateProps {
+  shortedReadBooks:BooksType[];
+  setShortedReadBooks:Dispatch<SetStateAction<BooksType[]>>;
+  setShortedWishList:Dispatch<SetStateAction<BooksType[]>>;
+  shortedWishList:BooksType[];
+}
+
+
 const ListedBooks = () => {
   const {wishList} =useContext(BooksContext);
   const {readBooks} =useContext(BooksContext);
+ 
 
  const [shortBy,setShotBy]= useState<'rating'|'pages'|'years'>("rating");
   
@@ -29,8 +39,8 @@ const handleShort=(Books: BooksType[])=>{
  }
  return shortedBooks
 }
-const shortedReadBooks=handleShort(readBooks)
-const shortedWishList =handleShort(wishList)
+  const shortedReadBooks=(handleShort(readBooks))
+ const shortedWishList=(handleShort(wishList))
 
 
   const [tab,setTab]=useState<boolean>(false);

@@ -10,18 +10,20 @@ export interface ButtonStateProps {
   setWishList: Dispatch<SetStateAction<BooksType[]>>;
   readBooks: BooksType[];
   setReadBooks: Dispatch<SetStateAction<BooksType[]>>;
-  
+
 }
   export const BooksContext = createContext<ButtonStateProps>({} as ButtonStateProps)
 const BooksProvider = ({ children }: ContextProps) => {
   const [readBooks,setReadBooks] = useState<BooksType[]>([])
   const [wishList,setWishList] = useState<BooksType[]>([])
 
+
   const AllStates ={
     readBooks,
     setReadBooks,
     wishList,
-    setWishList
+    setWishList,
+
   }
   
   return (
